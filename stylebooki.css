@@ -295,8 +295,8 @@ div .liste_appart
   
   .populaire-carte {
     display: flex;
-    width: 33.5em;
-    height: 11.785em;
+    width: 31.5em;
+    height: 15.785em;
 }
   
   .populaire-carte .etoiles {
@@ -511,7 +511,12 @@ div .liste_appart
     {
       height: 100%;
     }
-    
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+  }
     
     .sous-nav {
       order: 1;
@@ -575,7 +580,7 @@ div .liste_appart
   flex-grow: 1;
   transition: all 0.2s;
   flex-basis: 30%;
-  width: 40em;
+  width: 63em;
   height:7cm;
 }
 
@@ -609,7 +614,7 @@ div .liste_appart
     padding: 1rem;
 }
 
-h1 {
+.h1 {
   font-size: 2em;
   font-weight: bold;
   width: 23em;
