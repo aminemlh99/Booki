@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
+:root
+{
+    --blue: #0065fc;
+    --lightgrey: #f2f2f2;
+    --lightblue: #deebff;
+    --lighterblue: #f3f8ff;
+
+
+}
+
+*
+{
+    font-family:"Raleway","sans-serif";
+    box-sizing: border-box;
+}
+
+a
+{ 
+    color:inherit;
+    text-decoration: none;
+}
+/* Design NavBar*/
+nav 
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+#logo
+{
+    margin-right: auto;
+    padding: 0 2rem;
+    height: 40px;
+}
+
+nav a
+{
+    padding: 2rem;
+}
+
+.sign
+{
+    font-weight: bold;
+    color: #0065fc;
+}
+
+
+nav a:hover
+{
+    border-top: 4px solid #0065fc;
+}
+
+ 
+.sous-nav
+{
+    display: flex;   
+}
+/* Design Body */
+
+ .phrase
+ {
+    padding:0 2rem; 
+ }
+
+ /* Design barre de recherche*/
+ 
+.recherche
+  {
+    display: flex;
+  }
+
+.recherche i
+{
+    padding: 1rem 2rem;
+    background-color: var(--lightgrey);
+    border-radius: 1rem 0 0 1rem;
+}
+
+.recherche input
+{
+    padding-right: 3rem;
+    border: solid 0.5px;
+    width: 5.3cm;
+    border-color: whitesmoke;
+
+}
+
+.recherche input::placeholder
+{
+    font-size: 1rem;
+    font-family: "Raleway";
+    font-weight: bold; 
+}
+.recherche button
+{
+    background-color: #0065fc;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0 1rem 1rem 0;
+    padding: 0 1rem;
+    border: none;
+    width: 3.5cm;
+    cursor: pointer;
+}
+
+/* Design filtres */
+.filtres
+{
+    border: 2px solid var(--lightblue);
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    transition: all 200ms ease; 
+}
+
+.filtres_liste
+{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+
+
+.filtres .fas
+{
+    color: #0065fc;
+    background-color: var(--lightblue);
+    border-radius: 50%;
+    margin: -2px;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filtres span
+{
+    font-weight: bold;
+    padding: 0 1rem;
+}
+
+.filtres:hover
+{
+    background-color: var(--lighterblue);
+    transform: scale(1.02);
+}
+
+/* design message d'info*/
+
+.info
+{
+    display: flex;
+    align-items: center;
+}
+
+.info .fas
+{
+    color: #0065fc;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid lightgrey;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+/* liste appartement*/
+
+.liste_appart
+{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    
+}
+
+
+div .liste_appart  
+{
+    border-radius: 1rem;
+    background-color: var(--lightgrey);
+    padding: 0.5rem;
+}
+
+.liste_appart .ville
+{
+    flex-basis: 66%;
+}
+
+.liste_appart .ville a {
+    font-weight: bold;
+}
+
+.liste_appart .populaire
+{
+    flex-basis: 33%;
+}
+
+
+.ville_liste_app
+{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.ville
+{
+
+    background-color: var(--lightgrey);
+}
+
+
+/* appartement-carte */
+.appartement-carte{
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 16px #0000002e;
+    flex-grow: 1;
+    transition: all 0.2s;
+    flex-basis: 30%;
+    width:50em;
+  }
+  
+  .appartement-carte:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 5px 11px -5px #000000;
+  }
+  
+  /* APPARTEMENT IMAGE */
+  .appartement-carte-image img {
+    border-radius: 1rem 1rem 0 0;
+    height: 10rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  .appartement-carte p,
+  .appartement-carte h3,
+  .populaire-description p,
+  .populaire-description h3 {
+    margin: 0.2rem;
+  }
+  
+  .blue {
+    color: var(--blue);
+  }
+  
+  .grey {
+    color: var(--darkgrey);
+  }
+  /* POPULAIRE */
+  .liste_appart .populaire-flex {
+    display: block;
+    flex-direction: column;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+/* POPULAIRE CARTE */
+.populaire {
+  flex-wrap: wrap;
+  display: block;
+  }
+  
+  .populaire-carte.appartement-carte img {
+    height: auto;
+    border-radius: 1rem 0 0 1rem;
+    width: 40%;
+    margin-right: 0.5rem;
+    margin-right: 0.5rem;
+    object-fit: cover;
+  }
+  
+  .populaire-description {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .populaire-carte {
+    display: flex;
+    width: 33.5em;
+    height: 11.785em;
+}
+  
+  .populaire-carte .etoiles {
+    margin-top: auto;
+  }
+  
+ 
+  
+  .populaire h3,
+  .ville h3 {
+    margin-top: 0.5rem;
+  }
+
+/* Activités */
+
+.activites{
+  height: 700px;
+  width: auto;
+  margin: 45px 3.8% 0 3.8%;
+  padding: 0;
+}
+.activites h2{
+  font-size: 1.3em;
+  margin: 70px 0 30px 0;
+}
+.blocactivites{
+  display: flex;
+  justify-content: space-between;
+}
+.premierblock, .deuxiemeblock{
+  display: flex;
+  justify-content: space-between;
+  width: 48%;
+}
+.grandecarte{
+  height: 442px;
+  width: 46%;
+}
+.doublecarte{
+  height: 444px;
+  width: 46%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.doublecartepartie1{
+  height: 237px;
+}
+.doublecartepartie2{
+  height: 165px;
+}
+.grandecarte, .doublecartepartie1, .doublecartepartie2, .doublecarte2partie1, .doublecarte2partie2{
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 25%);
+  transition: transform .2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+.grandecarte:hover, .doublecartepartie1:hover, .doublecartepartie2:hover, .doublecarte2partie1:hover, .doublecarte2partie2:hover{
+  -ms-transform: scale(1.019); /* IE 9 */
+  -webkit-transform: scale(1.019); /* Safari 3-8 */
+  transform: scale(1.019); 
+  cursor: pointer;
+}
+.grandecarte:active, .doublecartepartie1:active, .doublecartepartie2:active, .doublecarte2partie1:active, .doublecarte2partie2:active{
+  box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.25);
+}
+.activites article img{
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+.grandecarte img{
+  height: 87%;
+}
+.doublecartepartie1 img{
+  height: 183px;
+  object-fit: cover;    
+}
+.doublecartepartie2 img{
+  height: 104px;
+  object-fit: cover;
+}
+.activites article h3{
+  font-size: 1em;
+  margin-left: 17px;
+}
+.doublecarte2partie1{
+  height: 194px;
+}
+.doublecarte2partie2{
+  height: 206px;
+}
+.doublecarte2partie1 img{
+  height: 140px;
+  width: 100%;
+  object-fit: cover;
+}
+.doublecarte2partie2 img{
+  height: 145px;
+  width: 100%;
+  object-fit: cover;
+}
+.doublecarte2partie1 h3, .doublecarte2partie2 h3{
+  margin-top: 14px;
+}
+  /* pied de page*/
+
+  footer {
+    background-color: var(--lightgrey);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: smaller;
+    padding: 1rem;
+  }
+  
+ 
+
+
+
+
+  /* RESPONSIVE*/
+
+
+  @media (max-width: 1200px) {
+    .liste_appart {
+      flex-direction: column;
+    }
+    .populaire {
+      order: -1;
+    }
+  }
+
+
+
+  @media (max-width: 800px) {
+    .liste_appart .populaire-flex {
+      flex-direction: row;
+    }
+    .activites{
+      height: 1360px;
+      margin: 45px 30px 0 30px;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+  .blocactivites{
+      height: 1275px;
+      flex-direction: column;
+  }
+  .premierblock, .deuxiemeblock{
+      height: 622px;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  .grandecarte{
+      height: 190px;
+  }
+  .grandecarte img, .doublecartepartie1 img, .doublecartepartie2 img, .doublecarte2partie1 img, .doublecarte2partie2 img{
+      height: 74%;
+  }
+  .doublecarte{
+      height: 405px;
+      justify-content: space-between;
+  }
+  .doublecarte div{
+      height: 190px;
+  }
+  .blocactivites div article{
+      width: 200%;
+  }
+  .populaire-carte {
+    display: flex;
+    width: 40em;
+    height: 7cm;
+}
+.appartement-carte {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 16px #0000002e;
+  flex-grow: 1;
+  transition: all 0.2s;
+  flex-basis: 30%;
+  width: 40em;
+  height:7cm;
+}
+
+  .liste_appart {
+    flex-direction: column;
+  }
+  .populaire {
+    order: -1;
+  }
+  .ville_liste_app {
+    display: block;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+} 
+  
+
+  @media (max-width: 1200px) {
+    #footer
+    {
+      height: 100%;
+    }
+    
+    
+    .sous-nav {
+      order: 1;
+      flex-basis: 100%;
+    }
+  
+    .sous-nav a {
+      flex-basis: 50%;
+      text-align: center;
+      border-bottom: 3px solid var(--lightgrey);
+    }
+  
+    .sous-nav a:hover {
+      border-bottom-color: var(--blue);
+      border-top-color: transparent;
+    }
+  
+    .recherche .phrase {
+      display: none;
+    }
+  
+    .fa-location-dot {
+      display: inline;
+      background-color: inherit;
+    }
+    .blocactivites{
+      height: 1275px;
+      flex-direction: column;
+  }
+  .premierblock, .deuxiemeblock{
+      height: 622px;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  .grandecarte{
+      height: 190px;
+  }
+  .grandecarte img, .doublecartepartie1 img, .doublecartepartie2 img, .doublecarte2partie1 img, .doublecarte2partie2 img{
+      height: 74%;
+  }
+  .doublecarte{
+      height: 405px;
+      justify-content: space-between;
+  }
+  .doublecarte div{
+      height: 190px;
+  }
+  .blocactivites div article{
+      width: 200%;
+  }
+  .populaire-carte {
+    display: flex;
+    width: 40em;
+    height: 7cm;
+}
+.appartement-carte {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 16px #0000002e;
+  flex-grow: 1;
+  transition: all 0.2s;
+  flex-basis: 30%;
+  width: 40em;
+  height:7cm;
+}
+
+  .liste_appart {
+    flex-direction: column;
+  }
+  .populaire {
+    order: -1;
+  }
+  .ville_liste_app {
+    display: block;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+  }
+
+  @media (max-width: 420px){
+  .activites {
+      height: 1360px;
+      
+      width: 16cm;
+  }
+  footer {
+    background-color: var(--lightgrey);
+    width: 200%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: smaller;
+    padding: 1rem;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  width: 23em;
+}
+.filtres {
+
+  border-radius: 2rem;
+  display: flex;
+  transition: all 200ms ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+}
