@@ -420,18 +420,9 @@ div .liste_appart
 
 
   /* RESPONSIVE*/
-
-
-  @media (max-width: 1200px) {
-    .liste_appart {
-      flex-direction: column;
-    }
-    .populaire {
-      order: -1;
-    }
-  }
-
-
+  
+  
+  /* 800PX */
 
   @media (max-width: 800px) {
     .liste_appart .populaire-flex {
@@ -504,14 +495,19 @@ div .liste_appart
     margin-bottom: 1rem;
 }
 } 
-  
+  /* 1200PX */
 
   @media (max-width: 1200px) {
     #footer
     {
       height: 100%;
     }
-
+    .liste_appart {
+      flex-direction: column;
+    }
+    .populaire {
+      order: -1;
+    }
     nav {
       display: flex;
       align-items: center;
@@ -580,7 +576,7 @@ div .liste_appart
   flex-grow: 1;
   transition: all 0.2s;
   flex-basis: 30%;
-  width: 63em;
+  width: 64em;
   height:7cm;
 }
 
@@ -599,6 +595,9 @@ div .liste_appart
 }
   }
 
+
+  /*  420 PX*/
+ 
   @media (max-width: 420px){
   .activites {
       height: 1360px;
